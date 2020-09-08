@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BrainAnalysis.Language" xmlns:system="clr-namespace:System;assembly=mscorlib">
+    
+    <!--通用操作-->
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Common_Layout">切换布局</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Common_Pan_Unit">毫米</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Common_Pan">平移</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Common_Rotate">旋转</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Common_Rotate_Unit">角度</system:String>
+
+    <!--显示步骤-->
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Display_Title">显示</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Display_Registration">配准</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Display_Matrix">矩阵</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Display_AutoRegistration">自动配准</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Display_ManualRegistration">手动配准</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Display_Reset">重置</system:String>
+
+    <!--配置面板-->
+    <system:String x:Key="UID_BrainAnalysis_ControlPanel_Database">数据库管理</system:String>
+    <system:String x:Key="UID_BrainAnalysis_ControlPanel_SUV">SUV</system:String>
+    <system:String x:Key="UID_BrainAnalysis_ControlPanel_BlendRatio">融合比例</system:String>
+    <system:String x:Key="UID_BrainAnalysis_ControlPanel_LUT">伪彩</system:String>
+    <system:String x:Key="UID_BrainAnalysis_ControlPanel_Settings">设置</system:String>
+
+</ResourceDictionary>

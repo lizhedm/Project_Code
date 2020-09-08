@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <BitmapImage x:Key="fusion_auto_registration" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="../Image/fusion_auto_registration.png"/>
+    <BitmapImage x:Key="reset_dr" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="../Image/reset_dr.png"/>
+    <BitmapImage x:Key="database_setting" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="../Image/database_setting.png" />
+    <BitmapImage x:Key="brain_settings" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="../Image/brain_settings.png" />
+
+    <!--重写button style悬停效果-->
+    <Style x:Key="BrainAnalysisCustomButton" TargetType="Button">
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" Value="0.8" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="Style_GroupBox_Common_CSW_Default" TargetType="GroupBox">
+        
+    </Style>
+
+    <Style x:Key="Style_Label_Common_CSW_Default" TargetType="Label">
+
+    </Style>
+
+</ResourceDictionary>

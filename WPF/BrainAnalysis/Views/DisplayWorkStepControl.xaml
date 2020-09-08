@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="BrainAnalysis.Views.DisplayWorkStepControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BrainAnalysis.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <StackPanel Orientation="Vertical" Width="315" Height="75">
+        <GroupBox Style="{DynamicResource Style_GroupBox_Common_CSW_Default}" 
+                  Uid="Transparent" Margin="0,0,0,0" Height="300">
+            <GroupBox.Header>
+                <Label Content="配准" />
+            </GroupBox.Header>
+            <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Button x:Name="UID_DISPLAY_BTN_AutoRegistration" 
+                                    Width="35" Height="35" Margin="0,0,0,0" 
+                                    FocusVisualStyle="{x:Null}" 
+                                    ToolTip="{DynamicResource UID_BrainAnalysis_Workstep_Display_AutoRegistration}">
+                        <Image VerticalAlignment="Center" Source="{DynamicResource fusion_auto_registration}" Stretch="None" />
+                    </Button>
+                    <ToggleButton x:Name="UID_DISPLAY_BTN_ManualRegistration" 
+                                            Width="35" Height="35" Margin="10,0,0,0"
+                                            FocusVisualStyle="{x:Null}" IsEnabled="{Binding IsEnabled, ElementName=UID_DISPLAY_BTN_AutoRegistration}" 
+                                            ToolTip="{DynamicResource UID_BrainAnalysis_Workstep_Display_ManualRegistration}"
+                                            Command="{Binding Execution}" >
+                        <Image VerticalAlignment="Center" Stretch="None" />
+                    </ToggleButton>
+                    <Button x:Name="UID_DISPLAY_BTN_ResetRegistration" 
+                                  Width="35" Height="35" Margin="10,0,0,0" 
+                                  FocusVisualStyle="{x:Null}" 
+                                  ToolTip="{DynamicResource UID_BrainAnalysis_Workstep_Display_Reset}">
+                        <Image VerticalAlignment="Center" Source="{DynamicResource reset_dr}" Stretch="None" />
+                    </Button>
+                </StackPanel>
+                <StackPanel Margin="0,10,0,0" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,0" >
+                        <Label HorizontalContentAlignment="Right" VerticalAlignment="Center"
+                                Style="{DynamicResource Style_Label_Common_CSW_Default}" 
+                            Content="{DynamicResource UID_BrainAnalysis_Workstep_Common_Pan}" Margin="0,0,0,0"
+                            FontFamily="{DynamicResource UID_AppCommon_Font_Family}"
+                            Foreground="#2C2D2E" Width="45"/>
+
+                        <Label  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0"
+                                Content="{DynamicResource UID_BrainAnalysis_Workstep_Common_Pan_Unit}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10,0,0">
+                        <Label HorizontalContentAlignment="Right" VerticalAlignment="Center"
+                            Margin="0,0,0,0"
+                            Content="{DynamicResource UID_BrainAnalysis_Workstep_Common_Rotate}"
+                            Width="45"/>
+                        <Label Margin="15,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                               Content="{DynamicResource UID_BrainAnalysis_Workstep_Common_Rotate_Unit}"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+</UserControl>

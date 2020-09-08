@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BrainAnalysis.Language" xmlns:system="clr-namespace:System;assembly=mscorlib">
+    
+    <!--Common Manapulate-->
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Common_Layout">Change Layout</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Common_Pan_Unit">mm</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Common_Pan">Move</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Common_Rotate">Rotate</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Common_Rotate_Unit">degree</system:String>
+
+    <!--Display Procedure-->
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Display_Title">Display</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Display_Registration">Registration</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Display_Matrix">Matrix</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Display_AutoRegistration">Auto Registration</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Display_ManualRegistration">Manual Registration</system:String>
+    <system:String x:Key="UID_BrainAnalysis_Workstep_Display_Reset">Reset</system:String>
+
+    <!--Config Panel-->
+    <system:String x:Key="UID_BrainAnalysis_ControlPanel_Database">Database Management</system:String>
+    <system:String x:Key="UID_BrainAnalysis_ControlPanel_SUV">SUV</system:String>
+    <system:String x:Key="UID_BrainAnalysis_ControlPanel_BlendRatio">Fusion Ratio</system:String>
+    <system:String x:Key="UID_BrainAnalysis_ControlPanel_LUT">LUT</system:String>
+    <system:String x:Key="UID_BrainAnalysis_ControlPanel_Settings">Setting</system:String>
+    
+</ResourceDictionary>
