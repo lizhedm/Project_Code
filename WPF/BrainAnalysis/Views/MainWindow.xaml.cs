@@ -23,6 +23,7 @@ namespace BrainAnalysis
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
         }
 
         /// <summary>

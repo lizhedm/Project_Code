@@ -284,10 +284,8 @@
                         <Rectangle Fill="Black" Margin="355,0,808,0"
                   Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
                         <Rectangle Fill="White" Margin="204,0,10,0" Grid.Column="2" Grid.Row="1"/>
-                        <Image Grid.Column="1" HorizontalAlignment="Left" Height="450" Margin="372,10,0,0" VerticalAlignment="Top" Width="674" Grid.ColumnSpan="2">
-                            <Image.Source>
-                                <BitmapImage DecodePixelWidth="320"  UriSource="/BrainAnalysis;component/Image/example_1.png" />
-                            </Image.Source>
+                        <Image Grid.Column="1" HorizontalAlignment="Left" Height="450" Margin="372,10,0,0" VerticalAlignment="Top" Width="674" Grid.ColumnSpan="2" Source="{Binding FirstImage.Source}">
+
                         </Image>
                         <Image Grid.Column="2" HorizontalAlignment="Left" Height="450" Margin="220,10,0,0" VerticalAlignment="Top" Width="766">
                             <Image.Source>
