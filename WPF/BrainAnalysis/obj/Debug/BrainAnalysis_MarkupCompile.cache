@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Project_Code\WPF\BrainAnalysis\obj\Debug\
+D:\Git\Project_Code\WPF\BrainAnalysis\obj\Debug\
 BrainAnalysis
 none
 false
 DEBUG;TRACE
-D:\Project_Code\WPF\BrainAnalysis\App.xaml
-5-1858097340
+D:\Git\Project_Code\WPF\BrainAnalysis\App.xaml
+61943147396
 
-7-2066586926
+11294439439
 13152784993
-Language\BrainAnalysis.en-US.xaml;Language\BrainAnalysis.zh-CN.xaml;Resource\Resources.xaml;Views\DisplayWorkStepControl.xaml;Views\MainWindow.xaml;
+Language\BrainAnalysis.en-US.xaml;Language\BrainAnalysis.zh-CN.xaml;Resource\Resources.xaml;Views\DisplayWorkStepControl.xaml;Views\MainWindow.xaml;Views\MMBrainAnalysisiControl.xaml;
 
 False
 

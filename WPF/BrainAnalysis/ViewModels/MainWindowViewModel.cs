@@ -1,17 +1,31 @@
-﻿using System;
-using System.Windows.Controls;
-using System.Windows.Media.Imaging;
+﻿using System.Windows;
+using System.Windows.Input;
 
 namespace BrainAnalysis
 {
-    public class MainWindowViewModel
+    public class MainWindowViewModel : AppViewModelBase
     {
-        public Image FirstImage { get; set; }
-
         public MainWindowViewModel()
         {
-            FirstImage = new Image();
-            FirstImage.Source = new BitmapImage(new Uri("D:/Project_Code/WPF/BrainAnalysis/Image/example_2.png"));
+
         }
+
+        #region ChangePageCommand
+        public ICommand ChangePageCommand => new DelegateCommand(ChangePage);
+
+        private void ChangePage(object commandParameter)
+        {
+            MessageBox.Show("ChangePage");
+        }
+        #endregion
+
+        #region ShowLogoInfoCommand
+        public ICommand ShowLogoInfoCommand => new DelegateCommand(ShowLogoInfo);
+
+        private void ShowLogoInfo(object commandParameter)
+        {
+            MessageBox.Show("ShowLogoInfo");
+        }
+        #endregion
     }
 }

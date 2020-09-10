@@ -13,17 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BrainAnalysis
+namespace BrainAnalysis.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MMBrainAnalysisiControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MMBrainAnalysisiControl : UserControl
     {
-        public MainWindow()
+        public MMBrainAnalysisiControl()
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
+            DataContext = new MMBrainAnalysisControlViewModel();
         }
     }
 }

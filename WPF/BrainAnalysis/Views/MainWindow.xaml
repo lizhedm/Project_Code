@@ -116,14 +116,14 @@
         <Menu Width="Auto" Height="60"
             Background="#000000"
             DockPanel.Dock="Top">
-            <Button Name="Page_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="80" Click="Page_Button_Click" HorizontalAlignment="Left" Height="50">
+            <Button Name="Page_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="80" Command="{Binding ChangePageCommand}" HorizontalAlignment="Left" Height="50">
                 <Button.Background>
                     <ImageBrush ImageSource="/BrainAnalysis;component/Image/page_button.png"/>
                 </Button.Background>
             </Button>
             <Viewbox Height="60" Width="1600">
             </Viewbox>
-            <Button Name="Logo_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="150" Click="Logo_Button_Click" HorizontalAlignment="Right" Height="50">
+            <Button Name="Logo_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="150" Command="{Binding ShowLogoInfoCommand}" HorizontalAlignment="Right" Height="50">
                 <Button.Background>
                     <ImageBrush ImageSource="/BrainAnalysis;component/Image/logo_button.png"/>
                 </Button.Background>
@@ -150,179 +150,7 @@
                     <Label Content="test3"></Label>
                 </TabItem>
                 <TabItem Header="多模态脑分析" Width="188" Height="40" Margin="0,0,0,0" FontSize="24" >
-                    <TabItem.Background>
-                        <ImageBrush Stretch="None"/>
-                    </TabItem.Background>
-                    <Grid Width="1914" Height="Auto" Margin="0,0,0,0">
-                        <Grid.Background>
-                            <ImageBrush/>
-                        </Grid.Background>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="43*"/>
-                            <ColumnDefinition Width="864*"/>
-                            <ColumnDefinition Width="1007*"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="260" Margin="10,0,0,0" VerticalAlignment="Top" Width="375" Grid.ColumnSpan="2">
-                            <WrapPanel Grid.Column="1" HorizontalAlignment="Left" Height="300" Margin="0,0,0,0" VerticalAlignment="Top" Width="451">
-
-                            </WrapPanel>
-                        </Border>
-                        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="364" Margin="10,284,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="375" Grid.ColumnSpan="2">
-                            <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="364" Margin="0,0,0,0" VerticalAlignment="Top" Width="375">
-                                <Expander Margin="5" Padding="5" Header="显示" Style="{DynamicResource ExpanderStyle}"  Height="122.5">
-                                    <views:DisplayWorkStepControl></views:DisplayWorkStepControl>
-                                </Expander>
-                                <Expander Margin="5" Padding="5" Header="分析" Style="{DynamicResource ExpanderStyle}"  Height="122.5">
-                                    <TextBlock>分析面板内容，TextBlock</TextBlock>
-                                </Expander>
-                                <StackPanel Grid.Row="1" VerticalAlignment="Stretch" Margin="10,30,10,0">
-                                    <Separator  HorizontalAlignment="Left"
-                                    RenderTransformOrigin="0.5,0.5" Width="325" Height="2" 
-                                    Style="{DynamicResource Style_Separator_Common_CSW_Default}" />
-                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                                        <Button x:Name="UID_BTN_DATABASESettings" Width="35" Height="35"
-                                            Style="{DynamicResource Style_Button_Common_CSW_Default}" IsEnabled="{Binding CanOpen}"
-                                            FocusVisualStyle="{x:Null}" Command="{Binding Execution}"
-                                            ToolTip="{DynamicResource UID_BrainAnalysis_ControlPanel_Database}"  >
-                                            <Image Source="{DynamicResource database_setting}" Stretch="None" Focusable="False"/>
-                                        </Button>
-                                        <Button x:Name="UID_BTN_CommonSettings" Width="35" Height="35" Margin="10,0,0,0"
-                                            Style="{DynamicResource Style_Button_Common_CSW_Default}" 
-                                            FocusVisualStyle="{x:Null}" ToolTip="{DynamicResource UID_BrainAnalysis_ControlPanel_SUV}" Content="SUV"
-                                            Command="{Binding ShowDialogCommand}">
-                                        </Button>
-
-                                        <!--<fusionBase:BlendRatioControl Margin="10,0,0,0" 
-                                              ToolTip="{DynamicResource UID_BrainAnalysis_ControlPanel_BlendRatio}" />
-
-                                        <appControlsViewer:BitmapPaletteControlMini x:Name="UID_CONTROL_LUT" 
-                                        Width="55" Height="35" Margin="0,0,0,0" 
-                                        FocusVisualStyle="{x:Null}" ToolTip="{DynamicResource UID_BrainAnalysis_ControlPanel_LUT}" >
-                                        </appControlsViewer:BitmapPaletteControlMini>-->
-                                        <Button x:Name="UID_BTN_BrainRegionSettings" Width="35" Height="35" Margin="10,0,0,0"
-                                            Style="{DynamicResource Style_Button_Common_CSW_Default}" 
-                                            FocusVisualStyle="{x:Null}" Command="{Binding Execution}"
-                                            ToolTip="{DynamicResource UID_BrainAnalysis_ControlPanel_Settings}" >
-                                            <Image Source="{DynamicResource brain_settings}" Stretch="None" Focusable="False"/>
-                                        </Button>
-                                    </StackPanel>
-                                </StackPanel>
-                            </StackPanel>
-                        </Border>
-                        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="270" Margin="10,0,0,0" VerticalAlignment="Bottom" Width="375" Grid.ColumnSpan="2" Grid.Row="1">
-                            <WrapPanel Grid.Column="1" HorizontalAlignment="Left" Height="250" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="375" Grid.RowSpan="2">
-                                <Button Name="Select_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="55" Click="Select_Button_Click" HorizontalAlignment="Left" Height="55" Margin="20,0,0,0">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/BrainAnalysis;component/Image/select.png"/>
-                                    </Button.Background>
-                                </Button>
-                                <Button Name="Zoom_In_Out_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="55" Click="Zoom_In_Out_Button_Click" HorizontalAlignment="Left" Height="55" Margin="1,0,0,0">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/BrainAnalysis;component/Image/zoom_in_out.png"/>
-                                    </Button.Background>
-                                </Button>
-                                <Button Name="Pan_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="55" Click="Pan_Button_Click" HorizontalAlignment="Left" Height="55" Margin="1,0,0,0">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/BrainAnalysis;component/Image/pan.png"/>
-                                    </Button.Background>
-                                </Button>
-                                <Button Name="Whirl_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="55" Click="Whirl_Button_Click" HorizontalAlignment="Left" Height="55" Margin="1,0,0,0">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/BrainAnalysis;component/Image/whirl.png"/>
-                                    </Button.Background>
-                                </Button>
-                                <Button Name="Fit_Window_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="55" Click="Fit_Window_Button_Click" HorizontalAlignment="Left" Height="55" Margin="1,0,0,0">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/BrainAnalysis;component/Image/fit_window.png"/>
-                                    </Button.Background>
-                                </Button>
-                                <Button Name="Default_Window_Width_Height_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="55" Click="Default_Window_Width_Height_Button_Click" HorizontalAlignment="Left" Height="55" Margin="1,0,0,0">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/BrainAnalysis;component/Image/default_window_width_height.png"/>
-                                    </Button.Background>
-                                </Button>
-                                <Button Name="Pixel_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="55" Click="Pixel_Button_Click" HorizontalAlignment="Left" Height="55" Margin="20,1,0,0">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/BrainAnalysis;component/Image/pixel.png"/>
-                                    </Button.Background>
-                                </Button>
-                                <Button Name="Draw_Circle_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="55" Click="Draw_Circle_Button_Click" HorizontalAlignment="Left" Height="55" Margin="1,1,0,0">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/BrainAnalysis;component/Image/draw_circle.png"/>
-                                    </Button.Background>
-                                </Button>
-                                <Button Name="Measure_Angle_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="55" Click="Measure_Angle_Button_Click" HorizontalAlignment="Left" Height="55" Margin="1,1,0,0">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/BrainAnalysis;component/Image/measure_angle.png"/>
-                                    </Button.Background>
-                                </Button>
-                                <Button Name="Measure_Line_Distance_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="55" Click="Measure_Line_Distance_Button_Click" HorizontalAlignment="Left" Height="55" Margin="1,1,0,0">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/BrainAnalysis;component/Image/measure_line_distance.png"/>
-                                    </Button.Background>
-                                </Button>
-                                <Button Name="Add_Arrow_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="55" Click="Add_Arrow_Button_Click" HorizontalAlignment="Left" Height="55" Margin="1,1,0,0">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/BrainAnalysis;component/Image/add_arrow.png"/>
-                                    </Button.Background>
-                                </Button>
-                                <Button Name="Delete_All_Roi_Button" Content="" Style="{StaticResource BrainAnalysisCustomButton}" Width="55" Click="Delete_All_Roi_Button_Click" HorizontalAlignment="Left" Height="55" Margin="1,1,0,0">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/BrainAnalysis;component/Image/delete_all_roi.png"/>
-                                    </Button.Background>
-                                </Button>
-                            </WrapPanel>
-                        </Border>
-                        <Rectangle Fill="Black" Margin="355,0,808,0" Grid.Column="1" Grid.ColumnSpan="2" Height="470">
-                        </Rectangle>
-                        <Rectangle Fill="Black"
-                  Grid.Row="0" Grid.Column="2" Margin="204,0,10,0" Height="470"/>
-                        <Rectangle Fill="Black" Margin="355,0,808,0"
-                  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
-                        <Rectangle Fill="White" Margin="204,0,10,0" Grid.Column="2" Grid.Row="1"/>
-                        <Image Grid.Column="1" HorizontalAlignment="Left" Height="450" Margin="372,10,0,0" VerticalAlignment="Top" Width="674" Grid.ColumnSpan="2" Source="{Binding FirstImage.Source}">
-
-                        </Image>
-                        <Image Grid.Column="2" HorizontalAlignment="Left" Height="450" Margin="220,10,0,0" VerticalAlignment="Top" Width="766">
-                            <Image.Source>
-                                <BitmapImage DecodePixelWidth="320"  UriSource="/BrainAnalysis;component/Image/example_2.png" />
-                            </Image.Source>
-                        </Image>
-                        <Image Grid.Column="1" HorizontalAlignment="Left" Height="440" Margin="372,18,0,0" Grid.Row="1" VerticalAlignment="Top" Width="674" Grid.ColumnSpan="2">
-                            <Image.Source>
-                                <BitmapImage DecodePixelWidth="320"  UriSource="/BrainAnalysis;component/Image/example_3.png" />
-                            </Image.Source>
-                        </Image>
-                        <Image Grid.Column="2" HorizontalAlignment="Left" Height="440" Margin="220,18,0,0" Grid.Row="1" VerticalAlignment="Top" Width="766">
-                            <Image.Source>
-                                <BitmapImage DecodePixelWidth="320"  UriSource="/BrainAnalysis;component/Image/example_4.png" />
-                            </Image.Source>
-                        </Image>
-                        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="151" Margin="362,8,0,0" TextWrapping="Wrap" Text="yao jianh hua&#xD;&#xA;230&#xD;&#xA;F,56Y&#xD;&#xA;2019/11/22&#xD;&#xA;09:16:26" VerticalAlignment="Top" Width="144" Foreground="White" FontFamily="Microsoft YaHei Light" TextChanged="TextBox_TextChanged" FontSize="20" BorderBrush="Black">
-                            <TextBox.Background>
-                                <ImageBrush/>
-                            </TextBox.Background>
-                        </TextBox>
-                        <TextBox Grid.Column="2" Height="95" Margin="52,8,0,0" TextWrapping="Wrap" Text="北京宣武医院&#xD;&#xA;FUSED&#xD;&#xA;UIH,uPMR790" VerticalAlignment="Top" Width="144" Foreground="White" FontFamily="Microsoft YaHei Light" TextChanged="TextBox_TextChanged" FontSize="20" BorderBrush="Black" HorizontalAlignment="Left" TextAlignment="Right">
-                            <TextBox.Background>
-                                <ImageBrush/>
-                            </TextBox.Background>
-                        </TextBox>
-                        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="59" Margin="362,406,0,0" TextWrapping="Wrap" Text="FUSED MPR&#xD;&#xA;THK:0.7" VerticalAlignment="Top" Width="144" Foreground="White" FontFamily="Microsoft YaHei Light" TextChanged="TextBox_TextChanged" FontSize="20" BorderBrush="Black">
-                            <TextBox.Background>
-                                <ImageBrush/>
-                            </TextBox.Background>
-                        </TextBox>
-                        <TextBox Grid.Column="2" Height="107" Margin="10,356,0,0" TextWrapping="Wrap" Text="Zoom:1.0&#xD;&#xA;T:17.01 SUVbw&#xD;&#xA;B:0.00 SUVbw&#xD;&#xA;WW:713 WL:358" VerticalAlignment="Top" Width="186" Foreground="White" FontFamily="Microsoft YaHei Light" TextChanged="TextBox_TextChanged" FontSize="20" BorderBrush="Black" HorizontalAlignment="Left" TextAlignment="Right">
-                            <TextBox.Background>
-                                <ImageBrush/>
-                            </TextBox.Background>
-                        </TextBox>
-                    </Grid>
+                    <views:MMBrainAnalysisiControl></views:MMBrainAnalysisiControl>
                 </TabItem>
             </TabControl>
         </StackPanel>
