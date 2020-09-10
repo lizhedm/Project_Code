@@ -6,7 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resource/Resources.xaml"/>
+                <ResourceDictionary Source="Resource/Resource.xaml"/>
                 <ResourceDictionary Source="Language/BrainAnalysis.zh-CN.xaml" />
                 <ResourceDictionary Source="Language/BrainAnalysis.en-US.xaml" />
             </ResourceDictionary.MergedDictionaries>

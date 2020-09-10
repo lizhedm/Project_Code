@@ -4,6 +4,7 @@
     <BitmapImage x:Key="reset_dr" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="../Image/reset_dr.png"/>
     <BitmapImage x:Key="database_setting" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="../Image/database_setting.png" />
     <BitmapImage x:Key="brain_settings" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="../Image/brain_settings.png" />
+    <BitmapImage x:Key="example_1" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="../Image/example_1.png" />
 
     <!--重写button style悬停效果-->
     <Style x:Key="BrainAnalysisCustomButton" TargetType="Button">

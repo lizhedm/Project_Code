@@ -11,8 +11,8 @@ namespace BrainAnalysis
         public Image FirstImage { get; set; }
         public MMBrainAnalysisControlViewModel(){
             FirstImage = new Image();
-            string path2 = System.Environment.CurrentDirectory;
-            FirstImage.Source = new BitmapImage(new Uri("../Image/example_1.png"));
+            string firstImagePath = "D:/Git/Project_Code/WPF/BrainAnalysis/Image/example_1.png";
+            FirstImage.Source = new BitmapImage(new Uri(firstImagePath));
         }
 
         #region UseSelectToolCommand

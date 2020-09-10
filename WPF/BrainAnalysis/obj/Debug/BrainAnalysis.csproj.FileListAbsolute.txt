@@ -26,7 +26,6 @@ D:\Git\Project_Code\WPF\BrainAnalysis\bin\Debug\BrainAnalysis.exe.config
 D:\Git\Project_Code\WPF\BrainAnalysis\bin\Debug\BrainAnalysis.exe
 D:\Git\Project_Code\WPF\BrainAnalysis\bin\Debug\BrainAnalysis.pdb
 D:\Git\Project_Code\WPF\BrainAnalysis\obj\Debug\BrainAnalysis.csprojAssemblyReference.cache
-D:\Git\Project_Code\WPF\BrainAnalysis\obj\Debug\Resource\Resources.baml
 D:\Git\Project_Code\WPF\BrainAnalysis\obj\Debug\Views\DisplayWorkStepControl.g.cs
 D:\Git\Project_Code\WPF\BrainAnalysis\obj\Debug\Views\MainWindow.g.cs
 D:\Git\Project_Code\WPF\BrainAnalysis\obj\Debug\Views\MMBrainAnalysisiControl.g.cs
@@ -46,3 +45,4 @@ D:\Git\Project_Code\WPF\BrainAnalysis\obj\Debug\BrainAnalysis.csproj.GenerateRes
 D:\Git\Project_Code\WPF\BrainAnalysis\obj\Debug\BrainAnalysis.csproj.CoreCompileInputs.cache
 D:\Git\Project_Code\WPF\BrainAnalysis\obj\Debug\BrainAnalysis.exe
 D:\Git\Project_Code\WPF\BrainAnalysis\obj\Debug\BrainAnalysis.pdb
+D:\Git\Project_Code\WPF\BrainAnalysis\obj\Debug\Resource\Resource.baml
