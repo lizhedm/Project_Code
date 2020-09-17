@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Root>
-  <Item Name="向上/下翻页" IsChecked="True" />
+  <Item Name="向上/下翻页" IsChecked="False" />
   <Item Name="窗宽窗位" IsChecked="True" />
   <Item Name="图像缩放" IsChecked="True" />
   <Item Name="图像平移" IsChecked="True" />
   <Item Name="图像旋转" IsChecked="False" />
-  <Item Name="图像方位" IsChecked="False" />
-  <Item Name="绘制方法" IsChecked="False" />
+  <Item Name="图像方位" IsChecked="True" />
+  <Item Name="绘制方法" IsChecked="True" />
   <Item Name="层厚调节" IsChecked="False" />
-  <Item Name="其他调节" IsChecked="False" />
+  <Item Name="其他调节" IsChecked="True" />
 </Root>

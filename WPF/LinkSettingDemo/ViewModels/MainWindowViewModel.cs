@@ -41,15 +41,14 @@ namespace LinkSettingDemo
 
         public MainWindowViewModel()
         {
-            //deser xml
-            string xmlPath = "D:/Project_Code/WPF/LinkSettingDemo/LinkSettingList/LinkSettingList.xml";
+            //paser xml
+            string xmlPath = "D:/Git/Project_Code/WPF/LinkSettingDemo/LinkSettingList/LinkSettingList.xml";
             CheckBoxList = GetCheckBoxListFromXML(xmlPath);
             CopyCheckBoxList = GetCheckBoxListFromXML(xmlPath);
         }
         #region GetCheckBoxListFromXML
         public List<CheckBoxViewModel> GetCheckBoxListFromXML(string xmlPath)
-        {
-            
+        {   
             try
             {
                 var allCheckBoxList = new List<CheckBoxViewModel>();
@@ -63,7 +62,7 @@ namespace LinkSettingDemo
                     var isChecked = checkBoxItems[j].Attributes["IsChecked"].Value;
                     var checkBoxItem = new CheckBoxViewModel
                     {
-                        MainWindowViewModel = this,
+                        //MainWindowViewModel = this,
                         Name = name,
                         IsChecked = Convert.ToBoolean(isChecked),
                     };
@@ -73,7 +72,7 @@ namespace LinkSettingDemo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error:" + ex.ToString());
+                _ = MessageBox.Show("error:" + ex.ToString());
                 return null;
             }
         }
@@ -157,7 +156,7 @@ namespace LinkSettingDemo
                 itemElement.SetAttribute("IsChecked", item.IsChecked.ToString());
                 root.AppendChild(itemElement);
             }
-            xmlDoc.Save(@"D:\Project_Code\WPF\LinkSettingDemo\LinkSettingList\LinkSettingList.xml");
+            xmlDoc.Save(@"D:\Git\Project_Code\WPF\LinkSettingDemo\LinkSettingList\LinkSettingList.xml");
             MessageBox.Show("当前状态成功写入，可打开LinkSettingList.xml查看");
         }
         #endregion
@@ -189,7 +188,7 @@ namespace LinkSettingDemo
                 itemElement.SetAttribute("IsChecked", item.IsChecked.ToString());
                 root.AppendChild(itemElement);
             }
-            xmlDoc.Save(@"D:\Project_Code\WPF\LinkSettingDemo\LinkSettingList\LinkSettingList.xml");
+            xmlDoc.Save(@"D:\Git\Project_Code\WPF\LinkSettingDemo\LinkSettingList\LinkSettingList.xml");
             MessageBox.Show("取消写入，恢复初始配置数据，可打开LinkSettingList.xml查看");
         }
         #endregion
