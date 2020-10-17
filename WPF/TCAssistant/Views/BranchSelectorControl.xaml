@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TCAssistant"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="900">
+             d:DesignHeight="450" d:DesignWidth="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -18,12 +18,18 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Width="450" Height="25">功能：1，可多选择item; 2,可手动输入item; 3，输入完成按Enter键保存</Label>
         <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Width="150" Height="25">Expected Fixed Branch:</Label>
-        <ComboBox x:Name="BranchCombo" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Width="700" Height="25" Text="{Binding SelectedText}" ItemsSource="{Binding BranchItemCheckedStates}" IsEditable="True" MaxDropDownHeight="160">
+        <ComboBox x:Name="BranchCombo" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Width="750" Height="25" 
+                  Text="{Binding SelectedText}" ItemsSource="{Binding BranchItemCheckedStates}" IsEditable="True" 
+                  MaxDropDownHeight="160">
+            <ComboBox.InputBindings>
+                <KeyBinding Command="{Binding SaveTextCommand}" Key="Enter"/>
+            </ComboBox.InputBindings>
             <ComboBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <CheckBox IsChecked="{Binding IsChecked}" Width="{Binding ActualWidth, ElementName=BranchCombo}">
+                    <StackPanel Orientation="Horizontal" Width="350" Height="40" Background="Cyan">
+                        <CheckBox IsChecked="{Binding IsChecked}" Width="{Binding ActualWidth, ElementName=BranchCombo}" Height="40">
                             <TextBlock Text="{Binding BranchItem.BranchItemName}" />
                         </CheckBox>
                     </StackPanel>

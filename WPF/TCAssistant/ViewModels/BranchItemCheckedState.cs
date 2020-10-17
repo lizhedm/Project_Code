@@ -9,7 +9,7 @@ namespace TCAssistant.ViewModels
 {
     class BranchItemCheckedState : ObservableObject
     {
-        public BranchItem BranchItem { get; private set; }
+        public BranchItem BranchItem { get; set; }
 
         private bool isChecked;
 

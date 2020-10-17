@@ -1,10 +1,11 @@
-D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\TCAssistant.exe.config
 D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\TCAssistant.exe
-D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\TCAssistant.pdb
+D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\TCAssistant.exe.config
 D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\CommonServiceLocator.dll
 D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\GalaSoft.MvvmLight.dll
 D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\GalaSoft.MvvmLight.Extras.dll
 D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\Prism.dll
+D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\System.ValueTuple.dll
 D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\System.Windows.Interactivity.dll
 D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\GalaSoft.MvvmLight.pdb
 D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\GalaSoft.MvvmLight.xml
@@ -12,7 +13,9 @@ D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
 D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\GalaSoft.MvvmLight.Extras.xml
 D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
 D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\GalaSoft.MvvmLight.Platform.xml
-D:\Git\Project_Code\WPF\TCAssistant\obj\Debug\TCAssistant.csprojAssemblyReference.cache
+D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\Prism.pdb
+D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\Prism.xml
+D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\System.ValueTuple.xml
 D:\Git\Project_Code\WPF\TCAssistant\obj\Debug\Views\BranchSelectorControl.g.cs
 D:\Git\Project_Code\WPF\TCAssistant\obj\Debug\MainWindow.g.cs
 D:\Git\Project_Code\WPF\TCAssistant\obj\Debug\App.g.cs
@@ -28,3 +31,4 @@ D:\Git\Project_Code\WPF\TCAssistant\obj\Debug\TCAssistant.csproj.CoreCompileInpu
 D:\Git\Project_Code\WPF\TCAssistant\obj\Debug\TCAssistant.csproj.CopyComplete
 D:\Git\Project_Code\WPF\TCAssistant\obj\Debug\TCAssistant.exe
 D:\Git\Project_Code\WPF\TCAssistant\obj\Debug\TCAssistant.pdb
+D:\Git\Project_Code\WPF\TCAssistant\bin\Debug\TCAssistant.pdb

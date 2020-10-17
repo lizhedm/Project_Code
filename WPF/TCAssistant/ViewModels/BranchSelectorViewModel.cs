@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using GalaSoft.MvvmLight;
 
@@ -14,13 +15,13 @@ namespace TCAssistant.ViewModels
 {
     class BranchSelectorViewModel : ObservableObject
     {
-        private string _selectedText = string.Empty;
+        private string selectedText = string.Empty;
 
         public string SelectedText
         {
             get
             {
-                return _selectedText;
+                return selectedText;
             }
             set
             {
@@ -35,26 +36,26 @@ namespace TCAssistant.ViewModels
                         item.IsChecked = false;
                     }
                 }
-                if (_selectedText != value)
+                if (selectedText != value)
                 {
-                    _selectedText = value;
+                    selectedText = value;
                     
                     RaisePropertyChanged("SelectedText");
                 }
             }
         }
 
-        private ObservableCollection<BranchItemCheckedState> _branchItems;
+        private ObservableCollection<BranchItemCheckedState> branchItems;
 
         public ObservableCollection<BranchItemCheckedState> BranchItemCheckedStates
         {
             get
             {
-                if (_branchItems == null)
+                if (branchItems == null)
                 {
-                    _branchItems = new ObservableCollection<BranchItemCheckedState>();
+                    branchItems = new ObservableCollection<BranchItemCheckedState>();
 
-                    _branchItems.CollectionChanged += (sender, e) =>
+                    branchItems.CollectionChanged += (sender, e) =>
                     {
                         if (e.OldItems != null)
                         {
@@ -74,10 +75,11 @@ namespace TCAssistant.ViewModels
                     };
                 }
 
-                return _branchItems;
+                return branchItems;
             }
         }
 
+        #region ItemPropertyChanged
         private void ItemPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == "IsChecked")
@@ -102,22 +104,41 @@ namespace TCAssistant.ViewModels
                 }
             }
         }
+        #endregion
 
         public BranchSelectorViewModel()
         {
-            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "1" } ));
-            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "2" }));
-            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "3" }));
-            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "4" }));
-            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "5" }));
-            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "6" }));
-            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "7" }));
-            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "8" }));
-            //BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "69_SP3" }));
-            //BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "69_SP4" }));
-            //BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "69_SP4_Innovation" }));
-            //BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "69_SP4_H2";  
+            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "67_SP3" } ));
+            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "67_SP4" }));
+            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "67_SP4_Innovation" }));
+            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "67_SP4_H2" }));
+            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "68_SP3" }));
+            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "68_SP4" }));
+            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "68_SP4_Innovation" }));
+            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "68_SP4_H2" }));
+            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "69_SP3" }));
+            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "69_SP4" }));
+            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "69_SP4_Innovation" }));
+            BranchItemCheckedStates.Add(new BranchItemCheckedState(new BranchItem() { BranchItemName = "69_SP4_H2" }));
         }
+
+        #region SaveTextCommand
+        public ICommand SaveTextCommand => new DelegateCommand(SaveText);
+        private void SaveText(object commandParameter)
+        {
+            string tempSelectedText = "";
+            foreach(var item in BranchItemCheckedStates)
+            {
+                string tempBranchItemName = "[" + item.BranchItem.BranchItemName + "]";
+                if (SelectedText.Contains(tempBranchItemName))
+                {
+                    tempSelectedText += tempBranchItemName + "; ";
+                }
+            }
+            SelectedText = tempSelectedText;
+        }
+        #endregion
+
     }
 
 

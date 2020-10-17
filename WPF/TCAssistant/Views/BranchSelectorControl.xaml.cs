@@ -26,5 +26,13 @@ namespace TCAssistant
             InitializeComponent();
             this.DataContext = new BranchSelectorViewModel();
         }
+
+        //private void UserControl_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if ((Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl)) && Keyboard.IsKeyDown(Key.S))
+        //    {
+        //        MessageBox.Show("test");
+        //    }
+        //}
     }
 }
